@@ -7,11 +7,11 @@ dbt_system_tables_mart:
     #    #DBT_DATABRICKS_HOST=xxx.cloud.databricks.com  DBT_DATABRICKS_HTTP_PATH=/sql/1.0/warehouses/xxxx DBT_DATABRICKS_TOKEN=dapixxxx dbt run
     local:
       type: databricks
-      catalog: main
-      schema: "{{ env_var('DBT_DATABRICKS_SCHEMA') }}"
-      host: "{{ env_var('DBT_DATABRICKS_HOST') }}"
-      http_path: "{{ env_var('DBT_DATABRICKS_HTTP_PATH') }}" #SQL warehouse Connection details
-      token: "{{ env_var('DBT_DATABRICKS_TOKEN') }}" # Personal Access Token (PAT)
+      catalog: rama
+      schema: "rd_test1"
+      host: "cust-e2-us-west-2.cloud.databricks.com"
+      http_path: "/sql/1.0/warehouses/c8ee309aef0561dc" #SQL warehouse Connection details
+      token: "dapi9c66f1419f51c5e02669744c2ad2781c" # Personal Access Token (PAT)
       # auth_type: oauth
       threads: 3
 
@@ -19,9 +19,9 @@ dbt_system_tables_mart:
       type: databricks
       catalog: main
       schema: dbt_system_tables
-      host: "{{ env_var('DBT_DATABRICKS_HOST') }}"
-      http_path: "{{ env_var('DBT_DATABRICKS_HTTP_PATH') }}" #SQL warehouse Connection details
-      token: "{{ env_var('DBT_DATABRICKS_TOKEN') }}" # Personal Access Token (PAT)
+      host: "cust-e2-us-west-2.cloud.databricks.com"
+      http_path: "/sql/1.0/warehouses/c8ee309aef0561dc" #SQL warehouse Connection details
+      token: "dapi9c66f1419f51c5e02669744c2ad2781c" # Personal Access Token (PAT)
       # auth_type: oauth
       threads: 3
 
